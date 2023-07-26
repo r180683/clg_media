@@ -1,0 +1,12 @@
+.loption{
+    cursor:pointer;
+    font-size:18px;
+    font-family:"Roboto";
+    color:black;
+    font-weight:400;
+}
+.active-option{
+    color:darkblue;
+    text-decoration: underline;
+    font-weight:700;
+}

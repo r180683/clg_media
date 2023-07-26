@@ -1,0 +1,214 @@
+.login-nav-container{
+    display:flex;
+    justify-content:center;
+    position: fixed-bottom;
+}
+.login-logo-btn-container{
+    display:flex;
+    width:90%;
+    justify-content:space-between;
+}
+.login-logo-text-container{
+    display:flex;
+    flex-direction:column;
+}
+.login-app-name{
+    font-weight:bold;
+    font-family:"Roboto";
+    font-size:30px;
+    color:black;
+    font-style:italic;
+}
+.login-app-description{
+    font-weight:400;
+    font-family:"Roboto";
+    font-size:28px;
+    color:rosybrown;
+}
+@media screen and (max-width:768px){
+    .login-app-name{
+        font-size:30px;
+    }
+    .login-app-description{
+        font-size:16px;
+    }
+}
+.login-signup-btn-container{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding-top:20px;
+    text-decoration:none;
+}
+.signup-btn{
+    background-color:#7703fc;
+    color:aliceblue;
+    font-weight:400;
+    font-size:18px;
+    border-radius:16px;
+    width:100px;
+    height:45px;
+    border:0px;
+    border-style:solid;
+    cursor:pointer;
+}
+@media screen and (max-width:768px){
+    .signup-btn{
+        font-size:16px;
+
+    }
+}
+.login-page-container{
+    display:flex;
+    flex-direction:column;
+    background-image:url("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheconversation.com%2Fbeyond-social-mobility-college-students-value-giving-back-to-society-171279&psig=AOvVaw13DThBsIsaQI9Z3OUcZmRV&ust=1690305410833000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOi0p8Dsp4ADFQAAAAAdAAAAABAD");
+    background-size:cover;
+    min-height:100vh;
+}
+@media screen and (max-width:768px){
+    .login-page-container{
+        min-height:90vh;
+        justify-content:space-between;
+    }
+}
+.login-videoo-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.login-video-and-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:80%;
+}
+@media screen and (max-width:768px){
+    .login-video-and-container{
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items:flex-start;
+    }
+}
+.login-video-container{
+    width:40%;
+}
+@media screen and (max-width:768px){
+    .login-video-container{
+        display:none;
+    }
+}
+.login-video{
+    width:100%;
+}
+.loginn-container{
+    display:flex;
+    background-color:aliceblue;
+    border-radius:16px;
+    flex-direction:column;
+    padding:20px;
+    width:30%;
+    max-height:370px;
+    padding-bottom:30px;
+}
+@media screen and (max-width:768px){
+    .loginn-container{
+        width:90%;
+    }
+}
+.input-label-container{
+    margin-bottom:20px;
+}
+.label-heading{
+    font-weight:400;
+    font-size:20px;
+    font-family:"Roboto";
+    color:#0349fc;
+}
+.input-container{
+    border:black solid 1px;
+    width:90%;
+    height:40px;
+    font-size:18px;
+    color:#141721;
+    font-weight:400;
+    font-family:"Roboto";
+    margin-top:10px;
+    border-radius:12px;
+    padding-left:15px;
+}
+@media screen and (max-width:768px){
+    .label-heading{
+
+    }
+}
+.form-submit-btn{
+    display:flex;
+    justify-content:flex-end;
+    padding-right:30px;
+    
+}
+.submit-btn{
+    background-color:#0390fc;
+    color:aliceblue;
+    font-weight:400;
+    font-size:18px;
+    border-radius:16px;
+    width:120px;
+    height:45px;
+    border:0px;
+    border-style:solid;
+    cursor:pointer;
+}
+@media screen and (max-width:768px){
+    .submit-btn{
+        width:100px;
+        font-size:16px;
+    }
+}
+.follow-us-container{
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+    align-items:center;
+    justify-content:center;
+}
+.follow-us-text{
+    font-weight:900;
+    font-family:"Roboto";
+    font-size:18px;
+    color:black;
+}
+.follow-us-icons-container{
+    display:flex;
+    align-items:center;
+    
+}
+@media screen and (max-width:768px){
+    .follow-us-container{
+        margin-top:0px;
+    }
+}
+.follow-us-icon{
+    width:30px;
+    height:30px;
+    margin-right:30px;
+}
+@media screen and (max-width:768px){
+    .follow-us-container{
+        justify-content: space-between;
+    }
+}
+.optionsContainer{
+    display:flex;
+    justify-content:space-between;
+    list-style-type:none;
+    margin-left:0px;
+    padding:0px;
+    padding-bottom:10px;
+}
+.error-msg{
+    color:red;
+    font-weight:400;
+    font-family:"Roboto";
+    font-size:16px;
+}
