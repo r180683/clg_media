@@ -104,8 +104,8 @@ class Login extends Component{
             return <Redirect to="/" />
         }
 
-        //const value=JSON.stringify(usersCredentials)
-        //localStorage.setItem("usersCredentials",value)
+        const value=JSON.stringify(usersCredentials)
+        localStorage.setItem("usersCredentials",value)
 
         return(
            <div className="login-page-container">
