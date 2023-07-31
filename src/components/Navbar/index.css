@@ -1,0 +1,92 @@
+.navbar-page-container{
+    display:flex;
+    justify-content:center;
+    background-color:skyblue;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.navbar-header-container{
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+}
+@media screen and (max-width:768px){
+    .navbar-header-container{
+        width:90%;
+        justify-content:flex-start;
+    }
+}
+.navbar-profile-container{
+    display:flex;
+    align-items:center;
+}
+.navbar-profile-btn{
+    width:40px;
+    height:40px;
+    background-color:white;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:orangered;
+    font-size:20px;
+    font-family:"Roboto";
+    font-weight:400;
+    border:none;
+    cursor:pointer;
+    border:1px solid blueviolet;
+}
+.navbar-clg-name{
+    color:black;
+    font-size:22px;
+    font-family:"Roboto";
+    font-weight:500;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-left:12px;
+}
+.navbar-app-logo-container{
+    display:flex;
+    align-items:center;
+}
+@media screen and (max-width:768px){
+    .navbar-clg-name{
+        display:none;
+    }
+    .navbar-app-logo-container{
+        display:none;
+    }
+}
+.navbar-logo{
+    width:30px;
+    height:30px;
+}
+.navbar-logo-name{
+    color:red;
+    font-size:22px;
+    font-family:"Roboto";
+    font-weight:500;
+    padding-left:12px;
+}
+.navbar-mobile-logo-name{
+    display:none;
+}
+@media screen and (max-width:768px){
+    .navbar-mobile-logo-name{
+        color:red;
+        font-size:22px;
+        font-family:"Roboto";
+        font-weight:500;
+        padding-left:12px;
+        display:flex;
+        cursor:pointer;
+        text-decoration: none;
+    }
+}
+.navbar-profile-btn-container{
+    text-decoration:none;
+}
+.navabr-mlogo{
+    text-decoration: none;
+}

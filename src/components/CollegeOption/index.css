@@ -1,12 +1,12 @@
-.clg-option-container{
-    display:flex;
-    background-color:white;
+.clg-option-text{
     cursor:pointer;
-    padding-left:10px;
-}
-.clg-name{
-    font-family:"Roboto";
-    font-size:17px;
+    background-color:#ffffff;
+    color:black;
     font-weight:400;
-    color:black;;
+    font-size:18px;
+    font-family:"Roboto";
+}
+.clg-option-cont{
+    background-color:#ffffff;
+    padding-left:20px;
 }

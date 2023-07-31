@@ -1,15 +1,16 @@
 import './index.css'
 
 const CollegeOption=props=>{
-    const {collegeDetails,updateCollege}=props
-    const {id,display_text}=collegeDetails
-    const onClickCollege=()=>{
+    const {updateCollege,collegeDetails}=props 
+    const {id,display_text}=collegeDetails 
+
+    const onClickClg=()=>{
         updateCollege(id,display_text)
     }
 
     return(
-        <div className="clg-option-container">
-            <p onClick={onClickCollege} className="clg-name">{display_text}</p>
+        <div className="clg-option-cont">
+            <h1 onClick={onClickClg} className="clg-option-text">{display_text}</h1>
         </div>
     )
 }

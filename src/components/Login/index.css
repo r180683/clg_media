@@ -107,7 +107,7 @@
     flex-direction:column;
     padding:20px;
     width:30%;
-    max-height:370px;
+    max-height:400px;
     padding-bottom:30px;
 }
 @media screen and (max-width:768px){
@@ -143,8 +143,9 @@
 }
 .form-submit-btn{
     display:flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     padding-right:30px;
+    align-items:center;
     
 }
 .submit-btn{
@@ -211,4 +212,20 @@
     font-weight:400;
     font-family:"Roboto";
     font-size:16px;
+}
+.forget-pwd-text{
+    color:blue;
+    font-size:20px;
+    font-weight:400;
+    font-family:"Roboto";
+    text-decoration:underline;
+}
+.login-pwd-container{
+    display:flex;
+    align-items:center;
+}
+.pwd-visible-icon{
+    width:30px;
+    height:40px;
+    cursor:pointer;
 }

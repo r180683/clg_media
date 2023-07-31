@@ -16,7 +16,7 @@ const collegeOptions=[
     {id:uuidv4(),display_text:"Vellore Engineering College",studentInfo:[{id:"V180683",name:"Avula Dinesh",email:"v180683@rguktrkv.ac.in"},{id:"V180670",name:"Devanaboina Pradeep",email:"v180670@rguktrkv.ac.in"},{id:"V180649",name:"Sampreeth Stanley",email:"v180649@rguktrkv.ac.in"}]},
 ]
 
-class SignUp extends Component{
+class ForgetPassword extends Component{
     state={clgid:'',clgname:'',searchValue:'',email:'',emailErrMsg:false,clgErrMsg:"",submitErrmsg:false,showGenerateBtn:false,showgeneratePassText:false}
 
     updateSearchValue=event=>{
@@ -86,15 +86,11 @@ class SignUp extends Component{
             const usersCredentialsList=JSON.parse(usersCredentials)
             //checking newly entered user alreay exists or not
             const isValidUser=usersCredentialsList.filter(each=>each.email===email)
-            if(isValidUser.length===0){
-                const newUserDetails={username:newStudentDetails[0].id,email:email,name:newStudentDetails[0].name,password:newStudentDetails[0].id,category:"student",clg:filteredList[0].display_text}
-                const updatedUserCredentials=[...usersCredentialsList,newUserDetails]
-                const value=JSON.stringify(updatedUserCredentials)
-                localStorage.setItem("usersCredentials",value)
-            this.setState({showGenerateBtn:true,submitErrMsg:"",emailErrMsg:"",clgErrMsg:""})
+            if(isValidUser.length===1){
+                this.setState({showGenerateBtn:true,clgErrMsg:"",emailErrMsg:"",submitErrMsg:""})
             }
             else{
-                this.setState({submitErrMsg:"*user already exist"})
+                this.setState({submitErrMsg:"*user doesn't exist"})
             }
         }
        }
@@ -107,9 +103,9 @@ class SignUp extends Component{
 
     renderShowGeneratepasswordText=()=>(
         <div className="forget-generate-container">
-            <h1 className="signup-thanks">Your Request is processing</h1>
-            <p className="signup-notify">We will reviewing your request and send you password to your email, once you are valid student in the selected college</p>
-            <p className="signup-login"><Link to="/login" ><span className="click-here">Click Here </span></Link>to Login</p>
+            <h1 className="forget-thanks">Your Request is processing</h1>
+            <p className="forget-notify">We will reviewing your request and send you password to your email, once you are valid student in the selected college</p>
+            <p className="forget-login"><Link to="/login" ><span className="click-here">Click Here </span></Link>to Login</p>
         </div>
     )
 
@@ -121,22 +117,22 @@ class SignUp extends Component{
             return <Redirect to="/" />
         }
         return(
-            <div className="signup-page-container">
-                <div className="signup-pagee-container">
-                    <div className="signup-logo-container">
+            <div className="forget-page-container">
+                <div className="forget-pagee-container">
+                    <div className="forget-logo-container">
                         <Link to="/">
-                            <img className="signup-logo" src="https://img.freepik.com/premium-vector/cm-mc-circle-shape-branding-minimal-logo_649646-13.jpg" alt="App-logo" />
+                            <img className="forget-logo" src="https://img.freepik.com/premium-vector/cm-mc-circle-shape-branding-minimal-logo_649646-13.jpg" alt="App-logo" />
                         </Link>
-                        <h1 className="signup-logo-head">College Media</h1>
+                        <h1 className="forget-logo-head">College Media</h1>
                     </div>
-                    <div className="signup-container">
-                        <form onSubmit={this.submitForgetPwdForm} className="signup-form-container">
-                            <div className="signup-emaill-container">
-                                <label className="signup-college-heading">Select Your college</label>
-                                <div className="signup-college-search-container">
-                                    <input disabled={showGenerateBtn} id="searchEl" value={searchValue} className="signup-clg-search" onChange={this.updateSearchValue} placeholder="Enter Your College Name" type="search" />
-                                    <div className="signup-page-search-icon-container">
-                                    <BiSearch onClick={this.getCollegeFiletredList} className="signup-page-search-icon" />   
+                    <div className="forget-container">
+                        <form onSubmit={this.submitForgetPwdForm} className="forget-form-container">
+                            <div className="forget-emaill-container">
+                                <label className="forget-college-heading">Select Your college</label>
+                                <div className="forget-college-search-container">
+                                    <input disabled={showGenerateBtn} id="searchEl" value={searchValue} className="forget-clg-search" onChange={this.updateSearchValue} placeholder="Enter Your College Name" type="search" />
+                                    <div className="forget-page-search-icon-container">
+                                    <BiSearch onClick={this.getCollegeFiletredList} className="forget-page-search-icon" />   
                                     </div>
                                     
                                 </div>
@@ -144,20 +140,20 @@ class SignUp extends Component{
                                 {filteredList.map(each=>(
                                     <CollegeOption updateCollege={this.updateCollege} collegeDetails={each} key={each.id} />
                                 ))}
-                                <p className="signup-email-error">{clgErrMsg}</p>
+                                <p className="forget-email-error">{clgErrMsg}</p>
                             </div>
                               
-                            <div className="signup-emaill-container">
-                                <label className="signup-college-heading">Enter Your Email</label>
-                                <input disabled={showGenerateBtn} placeholder="Enter Your Email" className="signup-emaill" onChange={this.updateEmail} value={email} type="email" />
-                                <p className="signup-email-error">{emailErrMsg}</p>
+                            <div className="forget-emaill-container">
+                                <label className="forget-college-heading">Enter Your Email</label>
+                                <input disabled={showGenerateBtn} placeholder="Enter Your Email" className="forget-emaill" onChange={this.updateEmail} value={email} type="email" />
+                                <p className="forget-email-error">{emailErrMsg}</p>
                             </div>
                             
-                            <div className="signup-form-buttons-container">
-                                <button disabled={showGenerateBtn} className="signup-form-btn" type="submit">Submit</button>
-                                {showGenerateBtn && <button onClick={this.generatePassword} className="signup-form-generate-btn" type="button">Generate Password</button>}
+                            <div className="forget-form-buttons-container">
+                                <button disabled={showGenerateBtn} className="forget-form-btn" type="submit">Submit</button>
+                                {showGenerateBtn && <button onClick={this.generatePassword} className="forget-form-generate-btn" type="button">Generate Password</button>}
                             </div>
-                            <p className="signup-email-error">{submitErrMsg}</p>
+                            <p className="forget-email-error">{submitErrMsg}</p>
                         </form>
                         {showgeneratePassText && this.renderShowGeneratepasswordText()}
                     </div>
@@ -167,4 +163,4 @@ class SignUp extends Component{
     }
 }
 
-export default withRouter(SignUp)
+export default withRouter(ForgetPassword)

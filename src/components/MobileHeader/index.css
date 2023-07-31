@@ -1,0 +1,23 @@
+.mobile-header-icons-container{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    margin:0px;
+    background-color:skyblue;
+    list-style-type:none;
+    width:100%;
+}
+.mobile-header-icon-item-container{
+    text-decoration:none;
+}
+.mobile-header-icon-item{
+    cursor:pointer;
+}
+.mobile-header-icon{
+    width:30px;
+    height:30px;
+    color:black;
+}
+.mobile-active-tab{
+    color:blue;
+}
